@@ -5,7 +5,7 @@
 ``` js
 // In Android
 Keyboard.addListener('keyboardDidShow', e => {
-    e.endCoordinates.height // ← On OnePlus 7, this value is underestimated by approximately 30 dp.
+    e.endCoordinates.height // ← On OnePlus 7, and Pixel 3XL (simulator) this value is underestimated by exactly StatusBar.currentHeight.
 })
 ```
 
