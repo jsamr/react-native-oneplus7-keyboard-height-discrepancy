@@ -1,4 +1,4 @@
-# Keyboard.addListener('keyboardDidShow', ...) callback is invoked with inaccurate measures in devices with notches on Android 10
+# Keyboard.addListener('keyboardDidShow', ...) callback is invoked with inaccurate measures in devices with notches on Android 10+
 
 ## Incriminated API
 
@@ -22,8 +22,8 @@ In `AndroidManifest.xml`, set `android:windowSoftInputMode="adjustPan"`.
 
 <table>
     <tr>
-        <th>Emulator, Pixel 3 XL, Android 10 (simulator)</th>
-        <th>Nexus 5X, Android 10 (simulator)</th>
+        <th>Pixel 3XL (with notch), Android 11 (emulator)</th>
+        <th>Nexus 5X, Android 11 (emulator)</th>
     </tr>
     <tr>
         <td valign="top"><img src="images/pixel-3xl.png" width="400"></td>
