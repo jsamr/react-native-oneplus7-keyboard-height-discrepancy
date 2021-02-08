@@ -1,4 +1,4 @@
-# Keyboard.addListener('keyboardDidShow', ...) callback is invoked with inaccurate measures in OnePlus 7, Android 10
+# Keyboard.addListener('keyboardDidShow', ...) callback is invoked with inaccurate measures in devices with notches on Android 10
 
 ## Incriminated API
 
@@ -15,16 +15,24 @@ In `AndroidManifest.xml`, set `android:windowSoftInputMode="adjustPan"`.
 
 ## Visual tests
 
-*The black horizontal bar should be the same width (40dp) as the red bar, in a container with a bottom padding of the keyboard's height. This component mimics KeyboardAvoidingView with behavior padding set. The height of keyboard should be the same as the height of the red bar. The issue has been reproduced with GBoard, SwiftKey...*
+*The red vertical bar should be the same height as the keyboard. You should see a black bar at the top of the soft keyboard with a height equal to the red vertical bar width.*
 
-**Remarks**: *I would have imagined that the view height would equal keyboard height + keyboard Y. But that is only true ... on OnePlus7, which is the problematic device!*
+**Remarks**: *In the below screenshots, the red vertical bar has been duplicated to the bottom for easy comparison of heights.*
 
-| Emulator, Pixel 2 XL, Android 10 | OnePlus 7, Android 10, OxygenOS 10.0.1 |
-|:-------------:|:-------------:|
-| <img src="images/visual-emulator.png" width="400"> | <img src="images/visual-oneplus7.jpg" width="400"> |
+
+<table>
+    <tr>
+        <th>Emulator, Pixel 3 XL, Android 10 (simulator)</th>
+        <th>Nexus 5X, Android 10 (simulator)</th>
+    </tr>
+    <tr>
+        <td valign="top"><img src="images/pixel-3xl.png" width="400"></td>
+        <td valign="top"><img src="images/nexus-5x.png" width="400"></td>
+    </tr>
+</table>
 
 
 ## Run tests
 
-*You need a OnePlus 7 with Android 10 to witness the discrepancy. It might well be the same on OnePlus 7 Pro.*
+*You need to run the project on a device with a notch (such as Pixel 3XL).*
 
